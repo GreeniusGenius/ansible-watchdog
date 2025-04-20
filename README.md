@@ -1,6 +1,5 @@
 # ansible-watchdog
 
-[![Ansible Galaxy](http://img.shields.io/badge/galaxy-whiskerlabs.watchdog-660198.svg)](https://galaxy.ansible.com/list#/roles/6649)
 
 An Ansible role for installing and configuring the
 [software watchdog daemon provided by the Linux kernel](http://linux.die.net/man/8/watchdog).
@@ -13,7 +12,21 @@ This role installs the `watchdog` apt package and configures
 
 To install from Ansible Galaxy:
 
-    $ ansible-galaxy install whiskerlabs.watchdog
+    ansible-galaxy install git+https://github.com/greeniusgenius/ansible-watchdog.git
+
+Or alternatively, add to your requirements.yml file:
+
+```
+    roles:
+  - name: infothrill.rpi_boot_config
+    version: "4.3.0"
+
+  - name: greeniusgenius.watchdog
+    src: https://github.com/greeniusgenius/ansible-watchdog.git
+    version: master
+  ```
+  `ansible-galaxy install -r requirements.yml -p roles`
+    
 
 Or alternatively, add the path to a local copy of this repository to
 `roles_path` within your project's `ansible.cfg` file:
