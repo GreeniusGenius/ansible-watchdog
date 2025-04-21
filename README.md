@@ -17,14 +17,11 @@ To install from Ansible Galaxy:
 Or alternatively, add to your requirements.yml file:
 
 ```
-    roles:
-  - name: infothrill.rpi_boot_config
-    version: "4.3.0"
-
+roles:
   - name: greeniusgenius.watchdog
     src: https://github.com/greeniusgenius/ansible-watchdog.git
     version: master
-  ```
+```
   `ansible-galaxy install -r requirements.yml -p roles`
     
 
